@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Lumora Academy</title>
+    <style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 30px 20px;
+        background-color: #F4F0E8;
+        color: #283C35;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto 45px;
+        padding: 20px 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .brand {
+        color: #526B57;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: #283C35;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .nav-links a:hover {
+        color: #D78D79;
+    }
+
+    .contact-container {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .contact-hero {
+        background: #526B57;
+        color: white;
+        text-align: center;
+        padding: 65px 25px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .contact-hero p {
+        line-height: 1.8;
+        max-width: 650px;
+        margin: auto;
+    }
+
+    .contact-form-section {
+        max-width: 650px;
+        margin: auto;
+        padding: 35px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+
+    .contact-form-section h2 {
+        color: #526B57;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contact-form-section label {
+        display: block;
+        margin: 15px 0 8px;
+        font-weight: bold;
+    }
+
+    .contact-form-section input,
+    .contact-form-section textarea {
+        width: 100%;
+        padding: 13px;
+        border: 1px solid #ddd;
+        border-radius: 7px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    .contact-form-section textarea {
+        resize: vertical;
+    }
+
+    .contact-form-section button {
+        width: 100%;
+        margin-top: 22px;
+        padding: 14px;
+        border: none;
+        border-radius: 7px;
+        background: #526B57;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-form-section button:hover {
+        background: #D78D79;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 55px;
+        padding: 25px;
+        color: #526B57;
+        font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+        .navbar {
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .nav-links {
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .contact-hero h1 {
+            font-size: 28px;
+        }
+
+        .contact-form-section {
+            padding: 25px 18px;
+        }
+    }
+.contact-info {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #283C35;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.contact-info > p {
+    color: #526B57;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contact-info-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-height: 170px;
+    margin: 10px 1%;
+    padding: 25px 18px;
+    background: white;
+    border-radius: 12px;
+    border-top: 4px solid #D78D79;
+    box-shadow: 0 4px 15px rgba(40, 60, 53, 0.07);
+    text-align: left;
+}
+
+.contact-info-card h3 {
+    color: #526B57;
+    font-size: 18px;
+}
+
+.contact-info-card p {
+    color: #283C35;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+    .contact-info-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.contact-submit-button {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    background-color: #526B57;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-submit-button:hover {
+    background-color: #D78D79;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="brand">
+            LUMORA ACADEMY
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="registration.html">Registration</a>
+            <a href="privacy.html">Privacy</a>
+             <a href="terms.html">Terms & Conditions</a>
+              <a href="contact.html">Contact</a>
+        </div>
+
+    </nav>
+
+    <main class="contact-container">
+
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+
+            <p>
+                We would love to hear from you.
+                If you have any questions, feel free to contact Lumora Academy.
+            </p>
+        </section>
+
+        <section class="contact-form-section">
+
+            <h2>Send Us a Message</h2>
+
+            <form>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name"
+                    placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                    placeholder="Enter your email address" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject"
+                    placeholder="Enter the subject" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message"
+                    placeholder="Write your message here..."
+                    rows="6" required></textarea>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScdUuHEIdfCh9YpmExLH332clxundkZq8lDOzhHjtv_GGvzhA/viewform"
+   class="contact-submit-button"
+   target="_blank"
+   rel="noopener">
+    Send Message
+</a>
+
+            </form>
+
+        </section>
+<section class="contact-info">
+
+    <h2>Get in Touch</h2>
+
+    <p>
+        Have questions about our programs or registration?
+        We are here to help.
+    </p>
+
+    <div class="contact-info-card">
+        <h3>General Inquiries</h3>
+        <p>Contact us for general questions about Lumora Academy.</p>
+    </div>
+
+    <div class="contact-info-card">
+        <h3>Course Information</h3>
+        <p>Reach out to learn more about our English programs.</p>
+    </div>
+
+    <div class="contact-info-card">
+        <h3>Student Support</h3>
+        <p>We welcome your questions and feedback.</p>
+    </div>
+
+</section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Lumora Academy. All Rights Reserved.</p>
+        <p>Founder & Director: Asra Sadiqi</p>
+    </footer>
+
+</body>
+
+</html>

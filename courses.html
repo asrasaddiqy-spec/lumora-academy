@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | Lumora Academy</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            background-color: #F4F0E8;
+            color: #283C35;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            padding: 18px 25px;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(40, 60, 53, 0.08);
+        }
+
+        .brand {
+            color: #526B57;
+            font-size: 21px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #283C35;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #D78D79;
+        }
+
+        .courses-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .courses-hero {
+            padding: 55px 25px;
+            text-align: center;
+            background-color: #526B57;
+            color: #FFFFFF;
+            border-radius: 16px;
+        }
+
+        .courses-hero h1 {
+            font-size: 36px;
+            margin-top: 0;
+        }
+
+        .courses-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #526B57;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .courses-hero h1 {
+                font-size: 28px;
+            }
+        }
+        .courses-list {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.courses-list h2 {
+    font-size: 30px;
+    color: #283C35;
+    margin-bottom: 12px;
+}
+
+.courses-intro {
+    color: #526B57;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.course-card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(40, 60, 53, 0.08);
+    text-align: left;
+    border-bottom: 4px solid #D78D79;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(40, 60, 53, 0.13);
+}
+
+.course-card h3 {
+    color: #526B57;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: #283C35;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.course-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 20px;
+    background-color: #526B57;
+    color: #F4F0E8;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.course-button:hover {
+    background-color: #D78D79;
+    color: white;
+}
+    </style>
+
+</head>
+<body>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="brand">
+            LUMORA ACADEMY
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="registration.html">Registration</a>
+            <a href="privacy.html">Privacy</a>
+             <a href="terms.html">Terms & Conditions</a>
+              <a href="contact.html">Contact</a>
+        </div>
+
+    </nav>
+
+    <main class="courses-container">
+
+        <section class="courses-hero">
+
+            <h1>Our Educational Programs</h1>
+
+            <p>
+                Explore our English learning programs and discover
+                new opportunities to improve your language skills.
+            </p>
+
+            <p>
+                Learn at your own pace, develop your abilities
+                and grow with confidence.
+            </p>
+
+        </section>
+<section class="courses-list">
+
+    <h2>Explore Our Programs</h2>
+
+    <p class="courses-intro">
+        Choose a program and develop your English skills
+        through practical and supportive learning.
+    </p>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>Speaking</h3>
+            <p>Improve your fluency, pronunciation and confidence in communication.</p>
+            <a href="registration.html?program=Speaking" class="course-button">
+                 Join This Program
+            </a>
+        </div>
+
+        <div class="course-card">
+            <h3>Writing</h3>
+            <p>Develop your skills in sentence writing, paragraphs, essays and emails.</p>
+            <a href="registration.html?program=Writing" class="course-button">
+                 Join This Program
+</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Reading</h3>
+            <p>Strengthen your reading comprehension and vocabulary through texts.</p>
+            <a href="registration.html?program=Reading" class="course-button">
+                 Join This Program
+</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Listening</h3>
+            <p>Improve your understanding of conversations and spoken English.</p>
+            <a href="registration.html?program=Listening" class="course-button">
+                 Join This Program
+</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Grammar</h3>
+            <p>Learn English grammar from basic to advanced levels.</p>
+            <a href="registration.html?program=Grammer" class="course-button">
+                 Join This Program
+</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Vocabulary</h3>
+            <p>Expand your general and academic vocabulary in context.</p>
+            <a href="registration.html?program=Vocabulary" class="course-button">
+                 Join This Program
+</a>
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Lumora Academy. All Rights Reserved.</p>
+        <p>Founder & Director: Asra Sadiqi</p>
+    </footer>
+
+</body>
+
+
+</body>
+</html>

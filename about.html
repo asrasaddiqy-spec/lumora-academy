@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Lumora Academy</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            background-color: #F4F0E8;
+            color: #283C35;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            padding: 18px 25px;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(40, 60, 53, 0.08);
+        }
+
+        .brand {
+            color: #526B57;
+            font-size: 21px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #283C35;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #D78D79;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-hero {
+            padding: 65px 30px;
+            text-align: center;
+            background-color: #526B57;
+            color: #FFFFFF;
+            border-radius: 16px;
+        }
+
+        .about-hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .about-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #526B57;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-hero h1 {
+                font-size: 28px;
+            }
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .info-card {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(40, 60, 53, 0.07);
+        }
+
+        .info-card h2 {
+            color: #526B57;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .info-card p {
+            color: #555555;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .values-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .values-section h2 {
+            color: #283C35;
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .value-card {
+            background-color: #FFFFFF;
+            padding: 25px 20px;
+            border-radius: 12px;
+            border-bottom: 4px solid #D78D79;
+            box-shadow: 0 4px 15px rgba(40, 60, 53, 0.06);
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-card h3 {
+            color: #526B57;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #666666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .programs-section {
+            margin-top: 55px;
+            text-align: center;
+        }
+
+        .programs-section h2 {
+            color: #283C35;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .programs-intro {
+            color: #666666;
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .program-item {
+            background-color: #FFFFFF;
+            padding: 28px 22px;
+            border-radius: 12px;
+            border-top: 4px solid #526B57;
+            box-shadow: 0 4px 15px rgba(40, 60, 53, 0.06);
+            transition: 0.3s;
+        }
+
+        .program-item:hover {
+            transform: translateY(-5px);
+            border-top-color: #D78D79;
+        }
+
+        .program-item h3 {
+            color: #526B57;
+            font-size: 19px;
+            margin-top: 0;
+        }
+
+        .program-item p {
+            color: #666666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .founder-section {
+            margin-top: 55px;
+            padding: 45px 35px;
+            background-color: #E8EDE5;
+            border-radius: 16px;
+        }
+
+        .founder-content {
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .founder-text h2 {
+            color: #283C35;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .founder-text h3 {
+            color: #526B57;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .founder-role {
+            color: #D78D79;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .founder-text p {
+            line-height: 1.9;
+            color: #555555;
+            font-size: 15px;
+        }
+
+        .join-section {
+            margin-top: 55px;
+            padding: 55px 30px;
+            text-align: center;
+            background-color: #526B57;
+            color: #FFFFFF;
+            border-radius: 16px;
+        }
+
+        .join-section h2 {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .join-section p {
+            max-width: 600px;
+            margin: 0 auto 28px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .join-button {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: #D78D79;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .join-button:hover {
+            background-color: #F4F0E8;
+            color: #283C35;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">LUMORA ACADEMY</a>
+
+        <div class="nav-links">
+           <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="registration.html">Registration</a>
+            <a href="privacy.html">Privacy</a>
+             <a href="terms.html">Terms & Conditions</a>
+              <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="about-container">
+
+        <section class="about-hero">
+            <h1>About Lumora Academy</h1>
+            <p>Learn with Purpose. Grow with Confidence.</p>
+            <p>
+                Empowering girls and young women through accessible
+                and supportive online education.
+            </p>
+        </section>
+
+        <section class="about-details">
+
+            <div class="info-card">
+                <h2>Our Mission</h2>
+                <p>
+                    To create accessible and supportive online learning
+                    opportunities for girls and young women, helping them
+                    develop their knowledge, confidence, and potential
+                    through education.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h2>Our Vision</h2>
+                <p>
+                    To build a community where every girl has the
+                    opportunity to learn, grow, and shape her own
+                    future through education.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="values-section">
+
+            <h2>Our Core Values</h2>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <h3>Accessibility</h3>
+                    <p>Making learning opportunities accessible to every girl.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Quality</h3>
+                    <p>Providing meaningful and effective learning experiences.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Respect</h3>
+                    <p>Creating a learning environment built on respect and understanding.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Growth</h3>
+                    <p>Encouraging continuous learning and personal development.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>Building trust through honesty and responsibility.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Collaboration</h3>
+                    <p>Learning and growing together as a supportive community.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="programs-section">
+
+            <h2>Our Educational Programs</h2>
+
+            <p class="programs-intro">
+                We offer skill-based learning programs designed
+                to help students improve their English abilities.
+            </p>
+
+            <div class="programs-grid">
+
+                <div class="program-item">
+                    <h3>Speaking</h3>
+                    <p>Develop fluency, pronunciation, conversation and confidence.</p>
+                </div>
+
+                <div class="program-item">
+                    <h3>Writing</h3>
+                    <p>Improve sentence building, paragraphs, essays and email writing.</p>
+                </div>
+
+                <div class="program-item">
+                    <h3>Reading</h3>
+                    <p>Build comprehension, vocabulary and critical reading skills.</p>
+                </div>
+
+                <div class="program-item">
+                    <h3>Listening</h3>
+                    <p>Strengthen listening comprehension and understanding of spoken English.</p>
+                </div>
+
+                <div class="program-item">
+                    <h3>Grammar</h3>
+                    <p>Learn and apply English grammar from basic to advanced levels.</p>
+                </div>
+
+                <div class="program-item">
+                    <h3>Vocabulary</h3>
+                    <p>Expand general and academic vocabulary through practical learning.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="founder-section">
+
+            <div class="founder-content">
+
+                <div class="founder-text">
+                    <h2>Meet Our Founder</h2>
+
+                    <h3>Asra Sadiqi</h3>
+
+                    <p class="founder-role">Founder & Director</p>
+
+                    <p>
+                        Lumora Academy was founded with a vision
+                        to create accessible and supportive learning
+                        opportunities for girls and young women.
+                        Through education, we aim to encourage
+                        confidence, knowledge and personal growth.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="join-section">
+
+            <h2>Ready to Start Your Learning Journey?</h2>
+
+            <p>
+                Join Lumora Academy and take your next step
+                toward knowledge, confidence and growth.
+            </p>
+
+            <a href="registration.html" class="join-button">
+                Join Lumora Academy
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Lumora Academy. All Rights Reserved.</p>
+        <p>Founder & Director: Asra Sadiqi</p>
+    </footer>
+
+</body>
+
+</body>
+</html>
